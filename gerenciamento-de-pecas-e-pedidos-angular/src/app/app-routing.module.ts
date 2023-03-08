@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContatoListComponent } from './contato-list/contato-list.component';
-import { ContatoComponent } from './contato/contato.component';
+import { ProdutoListComponent } from './produto-list/produto-list.component';
+import { ProdutoComponent } from './produto/produto.component';
 import { EntregaComponent } from './entrega/entrega.component';
 
 const routes: Routes = [
-  {path: '', component: ContatoComponent},
-  {path: 'contato/:id', component: ContatoComponent},
-  {path: 'contatoList', component: ContatoListComponent},
+  {path: '', component: ProdutoComponent},
+  {path: 'produto/:id', component: ProdutoComponent},
+  {path: 'produtoList', component: ProdutoListComponent},
   {path: 'entrega', component: EntregaComponent},
 ];
 

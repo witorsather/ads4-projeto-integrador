@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ContatoService } from '../contato.service';
-import { Contato } from '../models/contato';
+import { ProdutoService } from '../produto.service';
+import { Produto } from '../models/produto';
 
 @Component({
-  selector: 'app-contato-list',
-  templateUrl: './contato-list.component.html',
-  styleUrls: ['./contato-list.component.css']
+  selector: 'app-produto-list',
+  templateUrl: './produto-list.component.html',
+  styleUrls: ['./produto-list.component.css']
 })
-export class ContatoListComponent implements OnInit{
+export class ProdutoListComponent implements OnInit{
 
   public source: LocalDataSource = new LocalDataSource();
 
@@ -41,20 +41,20 @@ export class ContatoListComponent implements OnInit{
     },
   };  
 
-  constructor(private contatoService: ContatoService, private router: Router){}
+  constructor(private produtoService: ProdutoService, private router: Router){}
 
   ngOnInit(): void {
-    this.source.load(this.contatoService.list());
+    this.source.load(this.produtoService.list());
   }
 
   novo(){
-    this.router.navigateByUrl('/contato/novo');
+    this.router.navigateByUrl('/produto/novo');
   }
 
   onCustomAction(event: any) {
-    let contato:Contato = event.data;
+    let produto:Produto = event.data;
     console.log(event);
-    this.router.navigate([`contato/${contato.id}`]);
+    this.router.navigate([`produto/${produto.id}`]);
   }  
 
 }
