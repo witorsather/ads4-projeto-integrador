@@ -1,0 +1,40 @@
+import { Component } from '@angular/core';
+import { Contato } from './models/contato';
+import { LocalDataSource } from 'ng2-smart-table';
+import { ContatoService } from './contato.service';
+import { NbMenuItem } from '@nebular/theme';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+  title = 'agenda';
+
+
+  items: NbMenuItem[] = [
+    {
+      title: 'Cadastro',
+      expanded: true,
+      children: [
+        {
+          title: 'Contato',
+          link: 'contatoList'
+        },
+        {
+          title: 'Locais de Entrega',
+          link: 'entrega'
+        },
+      ],
+    },
+    {
+      title: 'Relatórios',
+    },
+  ];  
+
+
+
+
+}

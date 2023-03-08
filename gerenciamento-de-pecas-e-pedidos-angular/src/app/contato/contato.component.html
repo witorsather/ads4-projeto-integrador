@@ -1,0 +1,26 @@
+<h1>Agenda</h1>
+<div class="form-group">
+  <label for="nome" class="label">Nome:</label>
+  <input type="text" nbInput fullWidth id="nome" placeholder="José da Silva" [(ngModel)]="contato.nome">
+</div><br/>
+<div class="form-group">
+  <label for="telefone" class="label">Telefone:</label>
+  <input type="text" nbInput fullWidth id="telefone" placeholder="(62) 98181-8181" [(ngModel)]="contato.telefone">
+</div><br/>
+<div class="form-group">
+  <label for="endereco" class="label">Endereço:</label>
+  <input type="text" nbInput fullWidth id="endereco" placeholder="Rua 2" [(ngModel)]="contato.endereco">
+</div><br/>
+
+<nb-checkbox [(ngModel)]="fornecedor">Fornecedor</nb-checkbox><br/>
+
+<div class="form-group" *ngIf="fornecedor">
+  <label for="horario" class="label">Horário de Entrega:</label>
+  <input type="text" nbInput fullWidth id="horario" placeholder="08:00">
+</div><br/>
+
+
+<button (click)="salvar()" nbButton status="primary">Salvar</button>
+
+<br/><br/>
+
