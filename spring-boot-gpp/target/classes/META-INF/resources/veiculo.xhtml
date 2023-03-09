@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Veiculo</title>
+</h:head>
+
+<h:body style="background-color: black;">
+	<style>
+		body .ui-datatable .ui-datatable-header {
+	    background: black;
+	    border: 1px solid black;
+	    border-width: 1px 0 1px 0;
+	    color: #495057;
+	    padding: 1rem 1rem;
+	    font-weight: 600;
+	    border-top-left-radius: 4px;
+	    border-top-right-radius: 4px;
+		margin-left: 1450px;
+		}
+		body .ui-dialog .ui-dialog-content {
+    background-image: url(images/eeb84de76084f4ef08f5e184909eb55c--functional-training-tempranillo.jpg);
+    color: #495057;
+    border: 0 none;
+    padding: 0.2rem 1.5rem 2rem 1.5rem;
+    border: 0 none;
+}
+body .ui-dialog .ui-dialog-titlebar {
+    background-image: url(images/eeb84de76084f4ef08f5e184909eb55c--functional-training-tempranillo.jpg);
+    color: #495057;
+    font-weight: 700;
+    border-bottom: 0 none;
+    padding: 1.5rem;
+}
+body .ui-panelgrid .ui-panelgrid-cell {
+   
+    background-image: url(images/eeb84de76084f4ef08f5e184909eb55c--functional-training-tempranillo.jpg);
+    color: white;
+    padding: 1rem;
+	border-radius: -22px;
+	text-shadow:
+}
+body .ui-inputfield {
+    color: white;
+    background: black;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #ced4da;
+    outline: 0 none;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+    margin: 0;
+    float: none;
+    font-size: 1.25rem;
+    color: white;
+
+}
+body .ui-widget {
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    /* text-decoration: none; */
+}
+
+    </style> 
+
+	
+<style>
+	.ui-button.ui-state-hover {
+  box-shadow: rgba(255, 255, 255, 0.925) 0 -25px 18px -14px inset,rgba(143, 143, 143, 0.925) 0 1px 2px,rgba(0, 0, 0, 0.89) 0 2px 4px;
+  transform: scale(1.05) rotate(-1deg);
+}
+body .ui-chkbox .ui-chkbox-box {
+	/* border: 1px solid #ced4da; */
+border-width: 1px;
+background: black;
+width: 1.5rem;
+height: 1.5rem;
+text-align: center;
+position: relative;
+border-radius: 60px;
+transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s,opacity .2s;
+}
+body .ui-chkbox .ui-chkbox-box.ui-state-active {
+border-color: white;
+background: gray;
+color: rgb(0, 255, 0);
+text-shadow:
+0 0 7px gre,
+0 0 10px rgb(0, 255, 0),
+0 0 21px rgb(0, 255, 0),
+0 0 42px rgb(0, 255, 0),
+0 0 82px rgb(0, 255, 0),
+0 0 92px rgb(0, 255, 0),
+0 0 102px rgb(0, 255, 0),
+0 0 151px rgb(0, 255, 0);
+}
+body .ui-growl .ui-growl-item-container.ui-growl-info {
+background: black;
+border: 1px solid red;
+margin-top: 19px;
+color: white;
+text-shadow:
+0 0 7px white,
+0 0 10px black,
+0 0 21px black,
+0 0 42px black,
+0 0 82px black,
+0 0 92px black,
+0 0 102px black,
+0 0 151px black;
+border-width: 0 0 0 6px;
+}
+body .ui-growl .ui-growl-item-container.ui-growl-info .ui-growl-image {
+font-family: "primeicons" !important;
+font-style: normal;
+font-weight: normal;
+display: inline-block;
+background: none;
+font-size: 2rem;
+color: white;
+text-shadow:
+0 0 7px red,
+0 0 10px red,
+0 0 21px red,
+0 0 42px red,
+0 0 82px black,
+0 0 92px black,
+0 0 102px black,
+0 0 151px black;
+}
+</style>
+	
+	<h:form id="form">
+        <ui:include src="menu.xhtml" />	
+
+        <p:commandButton title="novo cadastro" type="button" icon="pi pi-plus-circle" onclick="PF('formveiculo').show()" style="top: 12px; margin-left: 5px; background-color: green; color: white;"/>
+
+		<p:dataTable id="listaveiculo" var="veiculo" value="#{veiculoControl.veiculos}" allowUnsorting="true" sortMode="single"  widgetVar="tablemodelo">
+			<p:column sortBy="#{veiculo.id}" headerText="Id" filterBy="#{veiculo.id}" style="background-color: black; color: white;">
+				<h:outputText value="#{veiculo.id}"  />
+			</p:column>
+			
+			<p:column sortBy="#{veiculo.ano}" headerText="ano" filterBy="#{veiculo.ano}" style="background-color: black; color: white;" >
+				<h:outputText value="#{veiculo.ano}" />
+			</p:column>
+			
+			<p:column sortBy="#{veiculo.anoModelo}" headerText="ano_modelo" filterBy="#{veiculo.anoModelo}" style="background-color: black; color: white;">
+				<h:outputText value="#{veiculo.anoModelo}"/>
+			</p:column>
+			
+			<p:column sortBy="#{veiculo.km}" headerText="km rodado" filterBy="#{veiculo.km}" style="background-color: black; color: white;">
+				<h:outputText value="#{veiculo.km}"/>
+			</p:column>
+			
+			<p:column sortBy="#{veiculo.placa}" headerText="placa" filterBy="#{veiculo.placa}" style="background-color: black; color: white;">
+				<h:outputText value="#{veiculo.placa}"/>
+			</p:column>
+			
+			<p:column sortBy="#{veiculo.modelo.nome}" headerText="modelo_id" filterBy="#{veiculo.modelo.nome}" style="background-color: black; color: white;">
+				<h:outputText value="#{veiculo.modelo.nome}"/>
+			</p:column>
+			
+			<p:column headerText="" style="background-color: black;">
+				
+				<p:commandButton icon="pi pi-pencil" update="form:veiculoDiag" action="#{veiculoControl.setVeiculo(veiculo)}" onclick="PF('formveiculo').show()" styleClass="ui-button-help mr-2" title="editar"/>
+				
+				<p:commandButton icon="pi pi-trash" update="form:listaveiculo" action="#{veiculoControl.excluir(veiculo.id)}" styleClass="ui-button-danger" title="deletar" style="margin-left: 20px;" />
+			
+			</p:column>
+		</p:dataTable>	    
+		
+		<p:dialog header="Veiculo" widgetVar="formveiculo" minHeight="40" showEffect="fade" closeOnEscape="true" style="border-radius: 20px">
+			<p:panelGrid id="veiculoDiag" columns="2">
+				<h:outputText value="Ano:"/>
+				<p:inputText value="#{veiculoControl.veiculo.ano}" style="width: 280px; height: 40px ; border-radius: 20px; "/>
+				
+				<h:outputText value="Ano Do Modelo:"  />
+				<p:inputText value="#{veiculoControl.veiculo.anoModelo}" style="width: 280px; height: 40px ; border-radius: 20px; "/>
+				
+				<h:outputText value="KM rodado:"  />
+				<p:inputText value="#{veiculoControl.veiculo.km}" style="width: 280px; height: 40px ; border-radius: 20px; "/>
+				
+				<h:outputText value="Placa:"  />
+				<p:inputMask value="#{veiculoControl.veiculo.placa}" mask="aaa-9*99" style="width: 280px; height: 40px ; border-radius: 20px; "/>
+				
+				<h:outputText value="Modelo"/>
+				<p:autoComplete id="modelo" value="#{veiculoControl.modeloId}" style="width: 100%"
+                                completeMethod="#{veiculoControl.completeModelo}"
+                                var="modelo" itemLabel="#{modelo}" itemValue="#{modelo.id}" forceSelection="true" scrollHeight="250">
+                 <p:ajax event="itemSelect" listener="#{veiculoControl.selecionarModelo}" />  
+			</p:autoComplete>            
+			
+			</p:panelGrid>
+
+			<p:commandButton value="Salvar" action="#{veiculoControl.salvar}" onclick="PF('formveiculo').close()" style="border-radius: 20px; top: 14px; margin-left: 24%; width: 60%; "/>
+			
+		</p:dialog> 
+	</h:form>
+</h:body>
+
+</html>
