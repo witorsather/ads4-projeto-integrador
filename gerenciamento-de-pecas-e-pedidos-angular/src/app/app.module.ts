@@ -8,18 +8,18 @@ import { AppComponent } from './app.component';
 import { NbButtonModule, NbCardModule, NbCheckboxModule, NbInputModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProdutoComponent } from './produto/produto.component';
+import { PecaComponent } from './peca/peca.component';
 import { EntregaComponent } from './entrega/entrega.component';
-import { ProdutoListComponent } from './produto-list/produto-list.component';
+import { PecaListComponent } from './peca-list/peca-list.component';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutoComponent,
+    PecaComponent,
     EntregaComponent,
-    ProdutoListComponent
+    PecaListComponent
   ],
   imports: [
     BrowserModule,

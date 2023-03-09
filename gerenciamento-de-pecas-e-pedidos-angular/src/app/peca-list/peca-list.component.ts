@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ProdutoService } from '../produto.service';
-import { Produto } from '../models/produto';
+import { PecaService } from '../peca.service';
+import { Peca } from '../models/peca';
 
 @Component({
-  selector: 'app-produto-list',
-  templateUrl: './produto-list.component.html',
-  styleUrls: ['./produto-list.component.css']
+  selector: 'app-peca-list',
+  templateUrl: './peca-list.component.html',
+  styleUrls: ['./peca-list.component.css']
 })
-export class ProdutoListComponent implements OnInit{
+export class PecaListComponent implements OnInit{
 
   public source: LocalDataSource = new LocalDataSource();
 
@@ -41,20 +41,20 @@ export class ProdutoListComponent implements OnInit{
     },
   };  
 
-  constructor(private produtoService: ProdutoService, private router: Router){}
+  constructor(private pecaService: PecaService, private router: Router){}
 
   ngOnInit(): void {
-    this.source.load(this.produtoService.list());
+    this.source.load(this.pecaService.list());
   }
 
   novo(){
-    this.router.navigateByUrl('/produto/novo');
+    this.router.navigateByUrl('/peca/novo');
   }
 
   onCustomAction(event: any) {
-    let produto:Produto = event.data;
+    let peca:Peca = event.data;
     console.log(event);
-    this.router.navigate([`produto/${produto.id}`]);
+    this.router.navigate([`peca/${peca.id}`]);
   }  
 
 }

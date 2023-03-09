@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Produto } from './models/produto';
+import { Peca } from './models/peca';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ProdutoService } from './produto.service';
+import { PecaService } from './peca.service';
 import { NbMenuItem } from '@nebular/theme';
 
 @Component({
@@ -20,8 +20,8 @@ export class AppComponent {
       expanded: true,
       children: [
         {
-          title: 'Produto',
-          link: 'produtoList'
+          title: 'Peca',
+          link: 'pecaList'
         },
         {
           title: 'Locais de Entrega',
