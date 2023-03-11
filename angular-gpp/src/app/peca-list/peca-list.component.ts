@@ -13,7 +13,6 @@ export class PecaListComponent implements OnInit{
 
   public source: LocalDataSource = new LocalDataSource();
 
-
   settings = {
     actions: {
       add: false,
@@ -26,16 +25,120 @@ export class PecaListComponent implements OnInit{
     hideHeader: false,
     hideSubHeader: false,
     columns: {
-      nome: {
-        title: 'Nome',
+      id_peca: {
+        title: 'id_peca',
         type: 'string',
       },
-      telefone: {
-        title: 'Telefone',
+      numero: {
+        title: 'numero',
         type: 'string',
       },
-      endereco: {
-        title: 'Endereço',
+      codigo_fabrica: {
+        title: 'codigo_fabrica',
+        type: 'string',
+      },
+      unidade: {
+        title: 'unidade',
+        type: 'string',
+      },
+      descricao: {
+        title: 'descricao',
+        type: 'string',
+      },
+      altura: {
+        title: 'altura',
+        type: 'string',
+      },
+      largura: {
+        title: 'largura',
+        type: 'string',
+      },
+      profundidade: {
+        title: 'profundidade',
+        type: 'string',
+      },
+      unidade_medida: {
+        title: 'unidade_medida',
+        type: 'string',
+      },
+      volumes: {
+        title: 'volumes',
+        type: 'string',
+      },
+      active: {
+        title: 'active',
+        type: 'string',
+      },
+      custo: {
+        title: 'custo',
+        type: 'string',
+      },
+      classificacao_custo: {
+        title: 'classificacao_custo',
+        type: 'string',
+      },
+      tipo_classificacao_custo: {
+        title: 'tipo_classificacao_custo',
+        type: 'string',
+      },
+      id_peca_especie: {
+        title: 'id_peca_especie',
+        type: 'string',
+      },
+      id_peca_material_fabricacao: {
+        title: 'id_peca_material_fabricacao',
+        type: 'string',
+      },
+      id_peca_cor: {
+        title: 'id_peca_cor',
+        type: 'string',
+      },
+      estoque: {
+        title: 'estoque',
+        type: 'string',
+      },
+      estoqueUnico: {
+        title: 'estoqueUnico',
+        type: 'string',
+      },
+      peca: {
+        title: 'peca',
+        type: 'string',
+      },
+      cor: {
+        title: 'cor',
+        type: 'string',
+      },
+      material: {
+        title: 'material',
+        type: 'string',
+      },
+      id_fornecedor: {
+        title: 'id_fornecedor',
+        type: 'string',
+      },
+      pecasCorModel: {
+        title: 'pecasCorModel',
+        type: 'string',
+      },
+      material_fabricacao: {
+        title: 'material_fabricacao',
+        type: 'string',
+      },
+      pecasMaterialModel: {
+        title: 'pecasMaterialModel',
+        type: 'string',
+      },
+      especie: {
+        title: 'especie',
+        type: 'string',
+      },
+      pecasEspecieModel: {
+        title: 'pecasEspecieModel',
+        type: 'string',
+      },
+      pecaPeca: {
+        title: 'pecaPeca',
         type: 'string',
       },
     },
@@ -54,7 +157,7 @@ export class PecaListComponent implements OnInit{
   onCustomAction(event: any) {
     let peca:Peca = event.data;
     console.log(event);
-    this.router.navigate([`peca/${peca.id}`]);
+    this.router.navigate([`peca/${peca.id_peca}`]);
   }  
 
 }

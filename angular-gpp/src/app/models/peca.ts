@@ -1,5 +1,5 @@
 export class Peca {
-  id: number = 0;
+  id_peca: number = 0;
   numero: string = "";
   codigo_fabrica: string = "";
   unidade: number = 0;
@@ -9,7 +9,7 @@ export class Peca {
   profundidade: number = 0;
   unidade_medida: number = 0;
   volumes: string = "";
-  active: number = 0;
+  active: boolean = false;
   custo: number = 0;
   classificacao_custo: number = 0;
   tipo_classificacao_custo: number = 0;
@@ -27,7 +27,6 @@ export class Peca {
   pecasMaterialModel: string = "";
   especie: string = "";
   pecasEspecieModel: string = "";
-  peca_peca: string = "";
   pecaPeca: string = "";
 
   // constructor(

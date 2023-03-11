@@ -21,7 +21,7 @@ export class PecaService {
   public list(): Peca[]{
     let idx = 0;
     for(let c of this.pecas){
-      c.id = idx;
+      c.id_peca = idx;
       idx++;
     }
     return this.pecas;
