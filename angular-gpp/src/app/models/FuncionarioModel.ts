@@ -1,6 +1,7 @@
-import { ClienteModel } from './cliente-model';
 
 export class FuncionarioModel {
-  idFuncionario: number;
-  cliente: ClienteModel;
+  constructor(
+    public idFuncionario: number,
+    public cliente: ClienteModel
+  ) {}
 }

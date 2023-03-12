@@ -1,4 +1,4 @@
-export class Produto {
+export class ProdutoModel {
   idProduto: number = 0;
   resumida: string = "";
   situacao: number = 0;
