@@ -1,34 +1,34 @@
-package com.develop.gpp.domain.entity;
+// package com.develop.gpp.domain.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+// import jakarta.persistence.Entity;
+// import jakarta.persistence.GeneratedValue;
+// import jakarta.persistence.GenerationType;
+// import jakarta.persistence.Id;
+// import lombok.Getter;
+// import lombok.Setter;
 
-@Getter
-@Setter
-@Entity
-public class ProdutoPecaModel {
+// @Getter
+// @Setter
+// //@Entity
+// public class ProdutoPecaModel {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long idProdutoPeca;
+//   @Id
+//   @GeneratedValue(strategy = GenerationType.IDENTITY)
+//   private Long idProdutoPeca;
 
-  private int quantidadePorProduto;
+//   private int quantidadePorProduto;
 
-  // @ManyToOne
-  // @JoinColumn(name = "id_peca")
-  // private Peca peca;
+//   // @ManyToOne
+//   // @JoinColumn(name = "id_peca")
+//   // private Peca peca;
 
-  // @ManyToOne
-  // @JoinColumn(name = "id_produto")
-  // private Produto produto;
+//   // @ManyToOne
+//   // @JoinColumn(name = "id_produto")
+//   // private Produto produto;
 
-  private int status;
+//   private int status;
 
-  private int situacao;
+//   private int situacao;
 
-  // getters and setters
-}
+//   // getters and setters
+// }

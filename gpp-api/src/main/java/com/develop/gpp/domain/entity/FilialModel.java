@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,28 +18,25 @@ import lombok.Setter;
 @Entity
 @Table(name = "filial")
 public class FilialModel {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_filial")
     private Long idFilial;
-    
+
     @Column(name = "sigla")
     private String sigla;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_cliente_filial")
-    private ClienteFilialModel clienteFilial;
+
+    // @OneToOne(mappedBy = "filial")
+    // private ClienteFilialModel clienteFilial;
 
     public FilialModel() {
-        super();
     }
 
-    public FilialModel(Long idFilial, String sigla, ClienteFilialModel clienteFilial) {
-        super();
+    public FilialModel(Long idFilial, String sigla) {
         this.idFilial = idFilial;
         this.sigla = sigla;
-        this.clienteFilial = clienteFilial;
+        // this.clienteFilial = clienteFilial;
     }
 
 }
