@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { PecaListComponent } from './peca-list/peca-list.component';
 import { PecaComponent } from './peca/peca.component';
 import { EntregaComponent } from './entrega/entrega.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path: '', component: PecaComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'peca/:id', component: PecaComponent},
   {path: 'pecaList', component: PecaListComponent},
   {path: 'entrega', component: EntregaComponent},

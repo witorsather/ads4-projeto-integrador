@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalDataSource } from 'ng2-smart-table';
 import { PecaService } from '../peca.service';
-import { Peca } from '../models/PecaModel';
+import { PecaModel } from '../models/PecaModel';
 
 @Component({
   selector: 'app-peca-list',
@@ -155,7 +155,7 @@ export class PecaListComponent implements OnInit{
   }
 
   onCustomAction(event: any) {
-    let peca:Peca = event.data;
+    let peca:PecaModel = event.data;
     console.log(event);
     this.router.navigate([`peca/${peca.id_peca}`]);
   }  

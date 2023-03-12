@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Peca } from './models/PecaModel';
+import { PecaModel } from './models/PecaModel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PecaService {
 
-  public pecas: Peca[] = [];
+  public pecas: PecaModel[] = [];
 
   constructor() { }
 
-  public add(peca: Peca){
+  public add(peca: PecaModel){
     this.pecas.push(peca);
   }
 
-  public get(idx: number): Peca{
+  public get(idx: number): PecaModel{
     return this.pecas[idx];
   }
 
-  public list(): Peca[]{
+  public list(): PecaModel[]{
     let idx = 0;
     for(let c of this.pecas){
       c.id_peca = idx;

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LocalDataSource } from 'ng2-smart-table';
 import { PecaService } from '../peca.service';
-import { Peca } from '../models/PecaModel';
+import { PecaModel } from '../models/PecaModel';
 
 @Component({
   selector: 'app-peca',
@@ -11,7 +11,7 @@ import { Peca } from '../models/PecaModel';
 })
 export class PecaComponent implements OnInit{
 
-  public peca:Peca = new Peca();
+  public peca:PecaModel = new PecaModel();
 
   public fornecedor: boolean = false;
 
@@ -32,7 +32,7 @@ export class PecaComponent implements OnInit{
 
   salvar(){
     this.pecaService.add(this.peca);
-    this.peca = new Peca();
+    this.peca = new PecaModel();
     console.log(`funcionou. Nome: `);
     this.router.navigateByUrl('/pecaList');
   }
