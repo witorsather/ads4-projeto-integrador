@@ -1,4 +1,4 @@
-export class Peca {
+export class PecaModel {
   id_peca: number = 0;
   numero: string = "";
   codigo_fabrica: string = "";
