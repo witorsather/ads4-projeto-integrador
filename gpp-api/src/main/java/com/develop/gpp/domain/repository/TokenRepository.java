@@ -1,10 +1,10 @@
-package com.develop.authentication_api.domain.repository;
+package com.develop.gpp.domain.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.develop.authentication_api.domain.entity.Token;
+import com.develop.gpp.domain.entity.Token;
 
 public interface TokenRepository extends JpaRepository<Token, Long> {
     

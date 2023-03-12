@@ -1,4 +1,4 @@
-package com.develop.authentication_api.domain.entity;
+package com.develop.gpp.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

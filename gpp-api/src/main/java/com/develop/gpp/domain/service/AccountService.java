@@ -1,4 +1,4 @@
-package com.develop.authentication_api.domain.service;
+package com.develop.gpp.domain.service;
 
 import java.util.Optional;
 
@@ -6,9 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.develop.authentication_api.domain.entity.Account;
-import com.develop.authentication_api.domain.entity.dto.LoginDTO;
-import com.develop.authentication_api.domain.repository.AccountRepository;
+import com.develop.gpp.domain.entity.Account;
+import com.develop.gpp.domain.entity.dto.LoginDTO;
+import com.develop.gpp.domain.repository.AccountRepository;
 
 import lombok.RequiredArgsConstructor;
 

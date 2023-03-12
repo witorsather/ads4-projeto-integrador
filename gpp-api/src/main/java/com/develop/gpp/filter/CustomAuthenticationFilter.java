@@ -1,4 +1,4 @@
-package com.develop.authentication_api.filter;
+package com.develop.gpp.filter;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.HttpClientErrorException.Unauthorized;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.develop.authentication_api.domain.service.TokenService;
+import com.develop.gpp.domain.service.TokenService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.servlet.FilterChain;

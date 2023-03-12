@@ -1,4 +1,4 @@
-package com.develop.authentication_api.domain.service;
+package com.develop.gpp.domain.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,10 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.develop.authentication_api.domain.entity.Task;
-import com.develop.authentication_api.domain.entity.Token;
-import com.develop.authentication_api.domain.entity.dto.TaskDTO;
-import com.develop.authentication_api.domain.repository.TaskRepository;
+import com.develop.gpp.domain.entity.Task;
+import com.develop.gpp.domain.entity.Token;
+import com.develop.gpp.domain.entity.dto.TaskDTO;
+import com.develop.gpp.domain.repository.TaskRepository;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;

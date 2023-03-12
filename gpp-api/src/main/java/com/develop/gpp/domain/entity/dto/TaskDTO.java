@@ -1,4 +1,4 @@
-package com.develop.authentication_api.domain.entity.dto;
+package com.develop.gpp.domain.entity.dto;
 
 import lombok.Getter;
 

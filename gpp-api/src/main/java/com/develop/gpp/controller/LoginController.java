@@ -1,12 +1,12 @@
-package com.develop.authentication_api.controller;
+package com.develop.gpp.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.develop.authentication_api.domain.entity.Token;
-import com.develop.authentication_api.domain.entity.dto.LoginDTO;
-import com.develop.authentication_api.domain.service.TokenService;
+import com.develop.gpp.domain.entity.Token;
+import com.develop.gpp.domain.entity.dto.LoginDTO;
+import com.develop.gpp.domain.service.TokenService;
 
 import lombok.RequiredArgsConstructor;
 

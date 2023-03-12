@@ -1,4 +1,4 @@
-package com.develop.authentication_api.controller;
+package com.develop.gpp.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.develop.authentication_api.domain.entity.Task;
-import com.develop.authentication_api.domain.entity.dto.TaskDTO;
-import com.develop.authentication_api.domain.service.TaskService;
+import com.develop.gpp.domain.entity.Task;
+import com.develop.gpp.domain.entity.dto.TaskDTO;
+import com.develop.gpp.domain.service.TaskService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.websocket.server.PathParam;

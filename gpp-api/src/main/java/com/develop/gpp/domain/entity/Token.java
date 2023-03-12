@@ -1,4 +1,8 @@
-package com.develop.authentication_api.domain.entity;
+package com.develop.gpp.domain.entity;
+
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,15 +14,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Account {
-
+public class Token {
+    
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    private String name;
 
+    @JsonIgnore
     private String username;
 
-    private String password;
+    private String token;
+
+    @JsonIgnore
+    private LocalDateTime valid;
 }
