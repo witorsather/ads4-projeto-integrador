@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Peca } from './models/peca';
+import { Peca } from './models/PecaModel';
 
 @Injectable({
   providedIn: 'root'

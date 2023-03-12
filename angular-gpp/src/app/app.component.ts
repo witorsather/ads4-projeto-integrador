@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Peca } from './models/peca';
+import { Peca } from './models/PecaModel';
 import { LocalDataSource } from 'ng2-smart-table';
 import { PecaService } from './peca.service';
 import { NbMenuItem } from '@nebular/theme';
