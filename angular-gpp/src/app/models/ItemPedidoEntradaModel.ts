@@ -1,4 +1,4 @@
-export class ProdutoPeca {
+export class ItemPedidoEntradaModel {
   idProdutoPeca: number = 0;
   quantidadePorProduto: number = 0;
   peca: string = "";
