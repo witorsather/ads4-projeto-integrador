@@ -18,8 +18,7 @@ public class ClienteFilialModel {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-
-  private int idCliente;
+  private Integer idCliente;
 
   private int idFilial;
 
@@ -34,7 +33,7 @@ public class ClienteFilialModel {
   public ClienteFilialModel() {
   }
 
-  public ClienteFilialModel(int idCliente, int idFilial, ClienteModel cliente, FilialModel filial) {
+  public ClienteFilialModel(Integer idCliente, int idFilial, ClienteModel cliente, FilialModel filial) {
     this.idCliente = idCliente;
     this.idFilial = idFilial;
     this.cliente = cliente;
